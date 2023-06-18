@@ -1,0 +1,273 @@
+*{
+
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'open sans' , 'sans-serif';
+
+}
+
+body{
+    height: 100vh;
+    background-color: #000;
+    background-image: url(mountain.jfif);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+
+}
+li {
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+
+}
+a:hover{
+    color: orange;
+}
+
+/* header */
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+.navbar{
+
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    transition: scale 0.5 ease; 
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .logo:hover{
+
+    scale: 1.25;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+.navbar .togle-btn{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action-btn{
+
+    background: linear-gradient(#a100f8 33.333%, cyan);
+    color: white;
+    border: none;
+    outline: none;
+    padding: 9px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    height: 35px;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+.action-btn:hover{
+
+scale: 1.05;  
+color: white;
+
+}
+.action-btn:active{
+
+    scale: 0.95;
+}
+/*drondown*/
+.drobdown-menu{
+display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255,255,255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.drobdown-menu.open{
+    height: 240px;
+}
+
+.drobdown-menu li{
+
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   
+}
+
+
+.drobdown-menu .action-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* hero */
+
+section#hero{
+color: white;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+         color: linear-gradient(45deg, orange, pink);
+}
+
+#hero h1{
+
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    
+}
+
+.fonts{
+    background-image: linear-gradient(
+        45deg,
+        #fffdfd 16.666%, 
+        #ffffff 16.666%, 
+        #a54af4 33.333%, 
+        #e600e2 33.333%, 
+        #ffdd00 50%, 
+        #ffffff 50%, 
+        #ffffff 66.666%, 
+        #476098 66.666%, 
+        #476098 83.333%, 
+        #f48200 83.333%)
+        ;
+  
+
+        background-size: 100%;
+        background-repeat: repeat;
+
+
+        -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+        font-weight: bold;
+
+       
+      animation: animation-text 0.75s ease forwards;
+      transition: scale 0.5 ease; 
+        
+}
+
+.fonts:hover{
+    scale: 1.05;
+    animation: animation-text 0.5s ease-in forwards;
+    
+}
+.font{
+    background-image: linear-gradient(
+        45deg,
+        #fffdfd 16.666%, 
+        #ffffff 16.666%, 
+        #ffffff 33.333%, 
+        #0084ff 33.333%,
+        #ff00bf 66.666%, 
+        #ffffff 66.666%
+
+       )
+        ;
+  
+
+        background-size: 100%;
+        background-repeat: repeat;
+
+
+        -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+        font-weight: bold;
+
+       
+      animation: animation-text 0.75s ease forwards;
+      transition: scale 0.5 ease; 
+        
+}
+
+.font:hover{
+    scale: 1.05;
+    animation: animation-text 0.5s ease-in forwards;
+    
+}
+
+
+@keyframes animation-text  {
+    0% {
+        background-size: 650%;
+    }
+    40% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+@keyframes rainbow-text-simple-animation {
+    0% {
+        background-size: 100%;
+    }
+    80% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 650%;
+    }
+}
+
+
+
+
+/* RESPONSIVE */
+
+
+@media (max-width: 992px){
+.navbar .links, .navbar .action-btn{
+    display: none;
+}
+.navbar .togle-btn{
+    display: block;
+}
+
+.drobdown-menu{
+    display: block;
+}
+
+}
+@media (max-width: 574px){
+
+    .drobdown-menu{
+        left: 2rem;
+        width: unset;
+    }
+}

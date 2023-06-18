@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+</head>
+<body>
+    
+    <header>
+
+<div class="navbar">
+
+    <div class="logo"><a href="#" class="fonts">Web dev creative</a></div>
+
+    <ul class="links">
+        <li><a href="hero">Home</a></li>
+        <li><a href="Service">Service</a></li>
+        <li><a href="About">About</a></li>
+        <li><a href="Contact">Contact</a></li>
+    </ul>
+
+    <a href="#" class="action-btn">Get Started</a>
+    <div class="togle-btn"> <i class="fa-solid fa-list-ul"></i></div>
+</div>
+
+<div class="drobdown-menu">
+
+    <li><a href="hero">Home</a></li>
+        <li><a href="Service">Service</a></li>
+        <li><a href="About">About</a></li>
+        <li><a href="Contact">Contact</a></li>
+        <li><a href="#" class="action-btn">Get Started</a></li>
+</div>
+    </header>
+
+    <main>
+        <section id="hero">
+
+            <h1 class="font">Welcome</h1>
+           
+
+<p>Lorem ipsum, dolor sit amet consectetur <br> adipisicing elit. Maxime, aperiam.</p>
+
+
+        </section>
+    </main>
+
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+
+    <script>
+
+   const togleobtn = document.querySelector('.togle-btn')
+   const togleobtnicon = document.querySelector('.togle-btn i')
+   const drobdownmenu = document.querySelector('.drobdown-menu')
+
+  togleobtn.onclick = function(){
+    drobdownmenu.classList.toggle('open')
+    const isOpen = drobdownmenu.classList.contains('open')
+
+togleobtnicon.classList = isOpen
+? 'fa-solid fa-xmark'
+: 'fa-solid fa-list-ul'
+
+}
+    </script>
+</body>
+</html>
